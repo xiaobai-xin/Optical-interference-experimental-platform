@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FitCurvePage</class>
+ <widget class="QWidget" name="FitCurvePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1082</width>
+    <height>821</height>
+   </rect>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <layout class="QVBoxLayout" name="left_layout">
+     <item>
+      <layout class="QHBoxLayout" name="calibrate_layout">
+       <item>
+        <widget class="QLabel" name="calibrate_label">
+         <property name="text">
+          <string>选择标定方式:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QComboBox" name="calibrate_combo">
+         <item>
+          <property name="text">
+           <string>压力标定</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>气体浓度标定</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="coords_layout">
+       <item>
+        <widget class="QLabel" name="coords_label">
+         <property name="text">
+          <string>输入坐标:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="position_layout_1">
+         <item>
+          <widget class="QLabel" name="position_label_1">
+           <property name="text">
+            <string>位置 1:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="position_input_1"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="position_button_1">
+           <property name="text">
+            <string>开始</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="pressure_concentration_layout">
+         <item>
+          <widget class="QLabel" name="pressure_concentration_label">
+           <property name="text">
+            <string>压力:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="pressure_concentration_input"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pressure_concentration_button">
+           <property name="text">
+            <string>开始</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="fit_button">
+       <property name="text">
+        <string>拟合</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="slope_label">
+       <property name="text">
+        <string>斜率:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="intercept_label">
+       <property name="text">
+        <string>截距:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="r_square_label">
+       <property name="text">
+        <string>R Square:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="mse_label">
+       <property name="text">
+        <string>均方误差:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="right_layout">
+     <item>
+      <widget class="FigureCanvasQTAgg" name="canvas" native="true"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTreeWidget" name="treeWidget">
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FigureCanvasQTAgg</class>
+   <extends>QWidget</extends>
+   <header>figurecanvasqtagg.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
